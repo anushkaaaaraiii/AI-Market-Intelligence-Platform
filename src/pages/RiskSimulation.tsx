@@ -13,8 +13,9 @@ const TRADING_DAYS_PER_MONTH = 21;
 interface Holding {
   symbol: string;
   name: string;
-  shares: number;
-  avgCost: number;
+  sector?: string;
+  quantity: number;
+  avgPrice: number;
   currentPrice?: number;
 }
 
@@ -261,7 +262,7 @@ export default function RiskSimulation() {
       }
 
       // Compute total value and weights
-      const values = parsed.map(h => h.shares * (h.currentPrice ?? h.avgCost));
+      const values = parsed.map(h => h.quantity * (h.currentPrice ?? h.avgPrice));
       const totalValue = values.reduce((a, b) => a + b, 0);
       if (totalValue <= 0) {
         setSimResult(null);
