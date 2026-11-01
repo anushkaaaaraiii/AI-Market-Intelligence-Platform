@@ -2,16 +2,12 @@
 Application configuration — all settings from environment variables.
 PRD Section 15.3: Zero hardcoded secrets.
 """
-
 from __future__ import annotations
-
 import json
 from functools import lru_cache
 from pathlib import Path
 
 from pydantic_settings import BaseSettings
-
-
 class Settings(BaseSettings):
     """
     All configuration is loaded from environment variables or .env file.
