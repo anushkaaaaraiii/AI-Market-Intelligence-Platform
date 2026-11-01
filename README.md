@@ -77,7 +77,7 @@ FastAPI backend (port 8000) ---- Redis (port 6379)
 - Python 3.11 or newer
 - Node.js 18 or newer and npm
 - Docker Desktop with Docker Compose
-- OpenSSL, for generating local JWT keys
+- OpenSSL for generating local JWT keys
 
 ## Quick start
 
@@ -268,4 +268,7 @@ docker compose -f docker/docker-compose.yml down
 ```
 
 Use `docker compose ... down -v` only when you intentionally want to delete local database, Redis, and MLflow volumes.
+
+
+
 
