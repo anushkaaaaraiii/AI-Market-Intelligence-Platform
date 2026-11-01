@@ -13,14 +13,11 @@ Literature Review verdict:
   - P/E value factor has 12-18 month realization lag
   - D/E is critical post-IL&FS (2018)
 """
-
 from __future__ import annotations
-
 import numpy as np
 import pandas as pd
 from sqlalchemy import text
 from sqlalchemy.orm import Session
-
 from backend.core.logging_config import get_logger
 
 logger = get_logger(__name__)
